@@ -80,7 +80,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
                           child: Text(
                             'Galindo Is Cool',
                             style: TextStyle(
-                                color: Colors.blueAccent, fontSize: 30),
+                                color: Color(0xff030303), fontSize: 30),
                           ),
                         ),
                         SizedBox(height: 20),
