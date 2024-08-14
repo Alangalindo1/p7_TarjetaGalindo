@@ -2,32 +2,39 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(TarjetaApp());
 }
 
-class MyApp extends StatelessWidget {
+class TarjetaApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: FloatingActionButtonDemo(),
+    return const MaterialApp(
+      home: PaginaInicio(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class FloatingActionButtonDemo extends StatefulWidget {
-  const FloatingActionButtonDemo({Key? key}) : super(key: key);
+class PaginaInicio extends StatefulWidget {
+  const PaginaInicio({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  _FloatingActionButtonDemoState createState() =>
-      _FloatingActionButtonDemoState();
+  _PaginaInicioState createState() => _PaginaInicioState();
 }
 
-class _FloatingActionButtonDemoState extends State<FloatingActionButtonDemo> {
+class _PaginaInicioState extends State<PaginaInicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Ejemplo de Tarjeta"),
+        actions: [Icon(Icons.search), Icon(Icons.more_vert)],
+        backgroundColor: Color(0xff3cc2ff),
+        shape: StadiumBorder(),
+      ),
       body: Center(
         child: Container(
           height: 300,
@@ -43,7 +50,7 @@ class _FloatingActionButtonDemoState extends State<FloatingActionButtonDemo> {
                       style: BorderStyle.solid)),
               borderRadius: BorderRadius.circular(20),
             ),
-            color: Colors.blueAccent,
+            color: Color(0xff96ffbe),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -71,7 +78,7 @@ class _FloatingActionButtonDemoState extends State<FloatingActionButtonDemo> {
                       children: [
                         Center(
                           child: Text(
-                            'card galindo',
+                            'Galindo Is Cool',
                             style: TextStyle(
                                 color: Colors.blueAccent, fontSize: 30),
                           ),
